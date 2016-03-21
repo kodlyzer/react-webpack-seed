@@ -3,6 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
     devtool: 'eval-source-map',
+
+    // Enable re-running webpack
+    watch: true,
+    colors: true,
+    progress: true,
+
     module: {
         loaders: [{
             loader: "babel-loader",
@@ -20,13 +26,13 @@ module.exports = {
         }]
     },
     output: {
-    	path: path.join(__dirname, 'build/js'),
+        path: path.join(__dirname, 'build/js'),
         publicPath: '/build/',
-        filename: '[name].js'     
+        filename: '[name].js'
     },
     entry: {
-    	bundle: [
-        './src/index.js'
+        bundle: [
+            './src/index.js'
         ]
     }
 };
